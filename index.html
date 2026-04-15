@@ -18,7 +18,7 @@
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;overflow-x:hidden;line-height:1.6}
-
+ 
 /* ── NAV ── */
 nav{position:fixed;top:0;width:100%;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:14px 40px;background:rgba(4,4,13,.96);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
 .logo{font-family:'Press Start 2P';color:var(--g);text-decoration:none;font-size:13px;letter-spacing:1px}
@@ -28,7 +28,7 @@ nav{position:fixed;top:0;width:100%;z-index:200;display:flex;align-items:center;
 #wbtn{padding:8px 16px;background:var(--g);color:#000;border:none;font-family:'Press Start 2P';font-size:9px;cursor:pointer;border-radius:3px;transition:.2s;white-space:nowrap}
 #wbtn:hover{box-shadow:var(--glow);transform:scale(1.04)}
 #wbtn.connected{background:var(--b)}
-
+ 
 /* ── SPRINT TICKER (fixed below nav) ── */
 #ticker{position:fixed;top:57px;width:100%;z-index:190;background:rgba(4,4,13,.92);border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:center;gap:20px;padding:7px 20px}
 #tickLabel{font-family:'Press Start 2P';font-size:8px;color:var(--g)}
@@ -37,7 +37,7 @@ nav{position:fixed;top:0;width:100%;z-index:200;display:flex;align-items:center;
 .tick-dot{width:7px;height:7px;border-radius:50%;background:var(--g);animation:pulse 1.4s infinite}
 .tick-dot.live{background:var(--r)}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
-
+ 
 /* ── HERO ── */
 #hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:120px 20px 60px;position:relative;overflow:hidden}
 #hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 50% 40%,rgba(0,255,136,.05) 0%,transparent 70%);pointer-events:none}
@@ -51,14 +51,14 @@ nav{position:fixed;top:0;width:100%;z-index:200;display:flex;align-items:center;
 .btn-main:hover{transform:scale(1.05);box-shadow:var(--glow)}
 .btn-outline{padding:14px 32px;background:transparent;color:var(--g);border:1px solid var(--g);font-family:'Press Start 2P';font-size:11px;cursor:pointer;border-radius:3px;transition:.2s}
 .btn-outline:hover{background:rgba(0,255,136,.08)}
-
+ 
 /* ── SECTION WRAPPER ── */
 .section{padding:80px 20px;max-width:960px;margin:0 auto}
 .section-sm{padding:60px 20px;max-width:760px;margin:0 auto}
 .sec-label{font-family:'Press Start 2P';font-size:8px;color:var(--g);letter-spacing:3px;margin-bottom:12px;opacity:.7}
 .sec-title{font-family:'Press Start 2P';font-size:clamp(1rem,3vw,1.5rem);margin-bottom:16px;line-height:1.5}
 .sec-body{color:var(--muted2);font-size:15px;line-height:1.8;max-width:600px}
-
+ 
 /* ── HOW IT WORKS ── */
 #how{background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
 .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:24px;margin-top:40px}
@@ -67,7 +67,7 @@ nav{position:fixed;top:0;width:100%;z-index:200;display:flex;align-items:center;
 .step-icon{font-size:28px;margin-bottom:12px}
 .step h3{font-family:'Press Start 2P';font-size:9px;color:var(--text);margin-bottom:10px;line-height:1.6}
 .step p{font-size:13px;color:var(--muted2);line-height:1.7}
-
+ 
 /* ── PRIZE POOL ── */
 #prizes{text-align:center}
 .prize-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:16px;margin-top:40px;max-width:760px;margin-left:auto;margin-right:auto}
@@ -82,7 +82,7 @@ nav{position:fixed;top:0;width:100%;z-index:200;display:flex;align-items:center;
 .prize-label{font-size:12px;opacity:.7}
 .prize-total{margin-top:28px;font-family:'Share Tech Mono';font-size:14px;color:var(--muted2)}
 .prize-total span{color:var(--g);font-size:16px}
-
+ 
 /* ── GAME SECTION ── */
 #game-wrap{background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:60px 20px}
 #game-inner{max-width:960px;margin:0 auto}
@@ -90,17 +90,17 @@ nav{position:fixed;top:0;width:100%;z-index:200;display:flex;align-items:center;
 .game-header h2{font-family:'Press Start 2P';font-size:12px;color:var(--text)}
 .game-badge{font-family:'Share Tech Mono';font-size:12px;padding:5px 12px;border-radius:20px;background:rgba(0,255,136,.1);border:1px solid var(--g);color:var(--g)}
 .game-badge.live{background:rgba(255,51,85,.1);border-color:var(--r);color:var(--r);animation:pulse 1s infinite}
-
+ 
 .gcont{position:relative;width:100%;aspect-ratio:16/9;border:1px solid var(--border);overflow:hidden;background:#000;border-radius:4px}
 canvas{width:100%!important;height:100%!important;display:block}
 .gcont::after{content:'';position:absolute;inset:0;pointer-events:none;z-index:4;background:repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(0,0,0,.06) 2px,rgba(0,0,0,.06) 4px);border-radius:4px}
-
+ 
 #ghud{position:absolute;inset:0;pointer-events:none;z-index:5;padding:10px 14px;display:flex;justify-content:space-between;align-items:flex-start}
 .gh-l{font-family:'Press Start 2P';font-size:10px;color:var(--g);text-shadow:0 0 8px rgba(0,255,136,.5);line-height:2}
 .gh-r{font-family:'Press Start 2P';font-size:10px;color:var(--b);text-align:right;line-height:2}
 #hint{position:absolute;bottom:10px;left:50%;transform:translateX(-50%);font-family:'Share Tech Mono';font-size:11px;color:var(--muted);white-space:nowrap;z-index:5}
 #flash{position:absolute;inset:0;z-index:6;opacity:0;pointer-events:none;background:rgba(255,51,85,.38);transition:opacity .06s;border-radius:4px}
-
+ 
 .ov{position:absolute;inset:0;z-index:10;background:rgba(4,4,13,.92);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;border-radius:4px}
 .ov h2{font-family:'Press Start 2P';font-size:16px}
 .ov p{font-family:'Share Tech Mono';font-size:12px;color:var(--muted2);text-align:center;max-width:400px;line-height:1.9}
@@ -112,7 +112,7 @@ canvas{width:100%!important;height:100%!important;display:block}
 #fscore{font-family:'Share Tech Mono';font-size:44px;color:var(--g);text-shadow:0 0 20px rgba(0,255,136,.5);line-height:1}
 #gorank{font-family:'Press Start 2P';font-size:10px;color:var(--gold);margin-top:-4px}
 #srow{display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
-
+ 
 /* ── LEADERBOARD ── */
 #lb-section{text-align:center}
 .lb-wrap{max-width:700px;margin:36px auto 0;background:var(--bg2);border:1px solid var(--border);border-radius:8px;overflow:hidden}
@@ -132,20 +132,20 @@ canvas{width:100%!important;height:100%!important;display:block}
 .r1 .lb-prize{color:var(--gold)}.r2 .lb-prize{color:#bbb}.r3 .lb-prize{color:#cd7f32}
 .lb-prize.small{color:var(--muted2)}
 .lb-empty{padding:36px;text-align:center;font-family:'Share Tech Mono';font-size:13px;color:var(--muted)}
-
+ 
 /* ── FOOTER ── */
 footer{padding:40px 20px;text-align:center;border-top:1px solid var(--border)}
 footer p{font-size:12px;color:var(--muted);line-height:2}
 footer a{color:var(--muted2);text-decoration:none}
 footer a:hover{color:var(--g)}
-
+ 
 /* ── TOAST ── */
 #toast{position:fixed;bottom:20px;right:20px;padding:12px 18px;font-family:'Share Tech Mono';font-size:13px;border-radius:4px;display:none;z-index:999;max-width:300px}
 .tok-ok{background:var(--g);color:#000}.tok-err{background:var(--r);color:#fff}
 </style>
 </head>
 <body>
-
+ 
 <!-- NAV -->
 <nav>
   <a href="#" class="logo" onclick="logoClick();return false;">SLOPECOIN</a>
@@ -158,7 +158,7 @@ footer a:hover{color:var(--g)}
   </div>
   <button id="wbtn" onclick="connectWallet()">CONNECT PHANTOM</button>
 </nav>
-
+ 
 <!-- ADMIN PANEL (hidden, reveal by clicking logo 5x) -->
 <div id="adminPanel" style="display:none;position:fixed;top:57px;left:50%;transform:translateX(-50%);z-index:300;background:#080818;border:1px solid var(--g);border-radius:6px;padding:20px 24px;min-width:380px;flex-direction:column;gap:12px;box-shadow:0 0 30px rgba(0,255,136,.2)">
   <div style="font-family:'Press Start 2P';font-size:9px;color:var(--g)">🔑 LAUNCH CONTROL</div>
@@ -170,14 +170,14 @@ footer a:hover{color:var(--g)}
     <button onclick="document.getElementById('adminPanel').style.display='none'" style="padding:10px 14px;background:transparent;color:var(--muted2);border:1px solid var(--border);font-family:'Press Start 2P';font-size:9px;cursor:pointer;border-radius:3px">✕</button>
   </div>
 </div>
-
+ 
 <!-- SPRINT TICKER -->
 <div id="ticker">
   <div class="tick-dot" id="tickDot"></div>
   <div id="tickLabel">SPRINT STARTS IN</div>
   <div id="tickTime">00:00:00</div>
 </div>
-
+ 
 <!-- HERO -->
 <section id="hero">
   <div class="hero-eyebrow">SOLANA · MEMECOIN · LAUNCH EVENT</div>
@@ -193,7 +193,7 @@ footer a:hover{color:var(--g)}
     <button class="btn-outline" onclick="document.getElementById('how').scrollIntoView({behavior:'smooth'})">HOW IT WORKS</button>
   </div>
 </section>
-
+ 
 <!-- HOW IT WORKS -->
 <div id="how">
   <div class="section">
@@ -228,7 +228,7 @@ footer a:hover{color:var(--g)}
     </div>
   </div>
 </div>
-
+ 
 <!-- PRIZE POOL -->
 <div id="prizes">
   <div class="section" style="text-align:center">
@@ -260,7 +260,7 @@ footer a:hover{color:var(--g)}
     <p class="prize-total">Total airdrop pool: <span>6.25%</span> of supply · One wallet, one entry</p>
   </div>
 </div>
-
+ 
 <!-- GAME -->
 <div id="game-wrap">
   <div id="game-inner">
@@ -276,7 +276,7 @@ footer a:hover{color:var(--g)}
         <div class="gh-r">SPEED: <span id="spv">1.0</span>x</div>
       </div>
       <div id="hint">← A &nbsp;|&nbsp; D → &nbsp;&nbsp;&nbsp; INFINITE TRIES · SUBMIT YOUR BEST</div>
-
+ 
       <!-- START OVERLAY -->
       <div class="ov" id="ovStart">
         <h2 style="color:var(--g)">READY TO RACE?</h2>
@@ -288,7 +288,7 @@ footer a:hover{color:var(--g)}
         </p>
         <button class="btn-game" onclick="startGame()">START GAME</button>
       </div>
-
+ 
       <!-- GAME OVER OVERLAY -->
       <div class="ov" id="ovDead" style="display:none">
         <h2 style="color:var(--r)">GAME OVER</h2>
@@ -303,7 +303,7 @@ footer a:hover{color:var(--g)}
     </div>
   </div>
 </div>
-
+ 
 <!-- LEADERBOARD -->
 <div id="lb-section">
   <div class="section" style="text-align:center">
@@ -320,28 +320,28 @@ footer a:hover{color:var(--g)}
     </div>
   </div>
 </div>
-
+ 
 <!-- FOOTER -->
 <footer>
   <p style="font-family:'Press Start 2P';font-size:10px;color:var(--g);margin-bottom:16px">SLOPECOIN</p>
   <p>Not financial advice. Memecoins are highly speculative assets. Only participate with what you can afford to lose.<br>
   Contract address will be published at launch. Verify everything on-chain before buying.</p>
 </footer>
-
+ 
 <div id="toast"></div>
-
+ 
 <script>
 // ═══════════════════════════════════════════════
 // CONFIG
 // ═══════════════════════════════════════════════
 const SPRINT = 30 * 60 * 1000;
-
+ 
 const PRIZES = ['2%','1.5%','1%','0.25%','0.25%','0.25%','0.25%','0.25%','0.25%','0.25%'];
 const PRIZE_LABELS = ['🥇 2% supply','🥈 1.5% supply','🥉 1% supply','0.25% supply','0.25% supply','0.25% supply','0.25% supply','0.25% supply','0.25% supply','0.25% supply'];
-
+ 
 // LAUNCH is set when you paste the CA. Stored in localStorage so it survives refresh.
 let LAUNCH = parseInt(localStorage.getItem('sc_launch') || '0');
-
+ 
 function setLaunch(ca) {
   if (!ca || ca.trim().length < 10) { toast('Enter a valid contract address', 1); return; }
   LAUNCH = Date.now();
@@ -353,7 +353,7 @@ function setLaunch(ca) {
   toast('🚀 Sprint is LIVE! Timer started.');
   tickTimer();
 }
-
+ 
 function resetLaunch() {
   localStorage.removeItem('sc_launch');
   localStorage.removeItem('sc_ca');
@@ -364,7 +364,7 @@ function resetLaunch() {
   toast('Sprint reset.');
   tickTimer();
 }
-
+ 
 // Secret admin panel — click logo 5 times
 let logoClicks = 0, logoTimer;
 function logoClick() {
@@ -377,7 +377,7 @@ function logoClick() {
     p.style.display = p.style.display === 'none' ? 'flex' : 'none';
   }
 }
-
+ 
 // ═══════════════════════════════════════════════
 // GAME CONSTANTS
 // ═══════════════════════════════════════════════
@@ -390,7 +390,7 @@ const TRACK_Y  = -1;
 const SURF_Y   = TRACK_Y + 0.21;
 const BALL_R   = 0.34;
 const BASE_SPD = 0.12;
-
+ 
 // ═══════════════════════════════════════════════
 // SPRINT TIMER
 // ═══════════════════════════════════════════════
@@ -400,7 +400,7 @@ function tickTimer() {
   const val  = document.getElementById('tickTime');
   const dot  = document.getElementById('tickDot');
   const badge = document.getElementById('gameBadge');
-
+ 
   if (now < LAUNCH) {
     lab.className = ''; dot.className = 'tick-dot';
     lab.textContent = 'SPRINT STARTS IN';
@@ -424,7 +424,7 @@ function ms2t(ms) {
 }
 function z2(n){return String(n).padStart(2,'0')}
 setInterval(tickTimer, 1000); tickTimer();
-
+ 
 // ═══════════════════════════════════════════════
 // THREE.JS
 // ═══════════════════════════════════════════════
@@ -435,15 +435,15 @@ let bx=0, by=SURF_Y+BALL_R, bz=0, vx=0;
 let falling=false, fallTimer=0;
 let nextSegZ=0, wallet=null;
 const K={l:false,r:false};
-
+ 
 const segMat  = new THREE.MeshStandardMaterial({color:0x111822,roughness:.9,metalness:.05});
 const edgeMat = new THREE.MeshStandardMaterial({color:0x00ff88,emissive:0x00ff88,emissiveIntensity:.22});
 const wallMat = new THREE.MeshStandardMaterial({color:0xff3355,emissive:0xff2233,emissiveIntensity:.5});
 const spkMat  = new THREE.MeshStandardMaterial({color:0xff6600,emissive:0xff4400,emissiveIntensity:.5});
-
+ 
 function tcx(z){return Math.sin(z*CURVE_F)*CURVE_A;}
 function drand(z,s){let v=Math.sin(z*1237.1+s*491.3)*83758.5;return v-Math.floor(v);}
-
+ 
 function init3(){
   const el=document.getElementById('gcont');
   renderer=new THREE.WebGLRenderer({canvas:document.getElementById('gc'),antialias:true});
@@ -455,7 +455,7 @@ function init3(){
   camera=new THREE.PerspectiveCamera(65,el.clientWidth/el.clientHeight,0.1,120);
   camera.position.set(0,5,10);
   camera.lookAt(0,0,-8);
-
+ 
   ballMesh=new THREE.Mesh(
     new THREE.SphereGeometry(BALL_R,20,20),
     new THREE.MeshStandardMaterial({color:0x00ff88,emissive:0x00ff88,emissiveIntensity:.7,roughness:.2,metalness:.4})
@@ -465,19 +465,19 @@ function init3(){
   scene.add(new THREE.AmbientLight(0x112233,1.4));
   const dl=new THREE.DirectionalLight(0x3355ff,.8);
   dl.position.set(4,12,8); scene.add(dl);
-
+ 
   const sv=[];
   for(let i=0;i<700;i++) sv.push((Math.random()-.5)*200,Math.random()*35+4,(Math.random()-.5)*200);
   const sg=new THREE.BufferGeometry();
   sg.setAttribute('position',new THREE.Float32BufferAttribute(sv,3));
   scene.add(new THREE.Points(sg,new THREE.PointsMaterial({color:0x5566aa,size:.12})));
-
+ 
   nextSegZ=0;
   for(let i=0;i<60;i++) spawnSeg();
   window.addEventListener('resize',onResize);
   requestAnimationFrame(frame);
 }
-
+ 
 function spawnSeg(){
   const z=nextSegZ, cx=tcx(z);
   nextSegZ-=SEG_STEP;
@@ -501,20 +501,21 @@ function spawnSeg(){
     }
   }
 }
-
+ 
 function frame(){requestAnimationFrame(frame);if(running)tick();renderer.render(scene,camera);}
-
+ 
 function tick(){
+  checkSprintEnd();
   const tSpd=Math.min(BASE_SPD+Math.floor(score/500)*.015,.38);
   spd+=(tSpd-spd)*.012;
   bz-=spd; score=Math.floor(-bz);
   document.getElementById('sv').textContent=score;
   document.getElementById('spv').textContent=(spd/BASE_SPD).toFixed(1);
-
+ 
   if(K.l) vx-=.017; if(K.r) vx+=.017;
   if(!K.l&&!K.r) vx*=.78;
   vx=Math.max(-.18,Math.min(.18,vx)); bx+=vx;
-
+ 
   if(!falling){
     const seg=segAt(bz);
     if(seg){if(Math.abs(bx-seg.cx)>SEG_W/2+.12) startFall();}
@@ -532,28 +533,34 @@ function tick(){
       if(dz<hz&&dx<hx){gameOver();return;}
     }
   }
-
+ 
   ballMesh.position.set(bx,by,bz);
   ballMesh.rotation.z-=spd*2.8; ballMesh.rotation.x+=vx*.8;
   camera.position.x+=(bx*.5-camera.position.x)*.10;
   camera.position.z+=(bz+10-camera.position.z)*.12;
   camera.position.y=5; camera.lookAt(bx*.3,.5,bz-7);
-
+ 
   while(nextSegZ>bz-80) spawnSeg();
   const cut=bz+28;
   while(segments.length&&segments[0].z>cut){const s=segments.shift();if(s.mesh){scene.remove(s.mesh);dispose(s.mesh);}}
   for(let i=obstacles.length-1;i>=0;i--){if(obstacles[i].z>cut){const o=obstacles.splice(i,1)[0];if(o.mesh){scene.remove(o.mesh);dispose(o.mesh);}}}
 }
-
+ 
 function segAt(z){for(const s of segments){if(Math.abs(s.z-z)<SEG_D*.55)return s;}return null;}
 function startFall(){falling=true;fallTimer=0;}
 function dispose(m){if(!m)return;m.geometry&&m.geometry.dispose();(Array.isArray(m.material)?m.material:[m.material]).forEach(mt=>mt&&mt.dispose&&mt.dispose());m.children.forEach(dispose);}
 function onResize(){const el=document.getElementById('gcont');camera.aspect=el.clientWidth/el.clientHeight;camera.updateProjectionMatrix();renderer.setSize(el.clientWidth,el.clientHeight);}
-
+ 
 // ═══════════════════════════════════════════════
 // GAME FLOW
 // ═══════════════════════════════════════════════
 function startGame(){
+  // Block new games after sprint ends
+  const now=Date.now();
+  if(LAUNCH>0 && now>=LAUNCH+SPRINT){
+    toast('The sprint has ended — no more plays accepted.',1);
+    return;
+  }
   segments.forEach(s=>{if(s.mesh){scene.remove(s.mesh);dispose(s.mesh);}});
   obstacles.forEach(o=>{if(o.mesh){scene.remove(o.mesh);dispose(o.mesh);}});
   segments=[];obstacles=[];
@@ -567,19 +574,19 @@ function startGame(){
   document.getElementById('ovDead').style.display='none';
   running=true;
 }
-
+ 
 function restartGame(){
   document.getElementById('ovDead').style.display='none';
   startGame();
 }
-
+ 
 function gameOver(){
   running=false;
   if(score>best){best=score;document.getElementById('bv').textContent=best;}
   document.getElementById('fscore').textContent=score.toLocaleString();
-
+ 
   const now=Date.now(), live=now>=LAUNCH&&now<LAUNCH+SPRINT;
-
+ 
   // Show projected rank
   const lb=getLB();
   const projRank=lb.filter(e=>e.s>score).length+1;
@@ -588,7 +595,7 @@ function gameOver(){
     if(projRank<=10) rankEl.textContent=`YOU WOULD BE RANK #${projRank} — ${PRIZES[projRank-1]}`;
     else rankEl.textContent=`RANK #${projRank} — OUTSIDE TOP 10`;
   } else { rankEl.textContent=''; }
-
+ 
   document.getElementById('sbtn').disabled=!(wallet&&live);
   document.getElementById('gomsg').textContent=
     !wallet?'Connect your Phantom wallet to submit your score during the live sprint.':
@@ -596,13 +603,13 @@ function gameOver(){
     'LIVE SPRINT! Submit your score to claim your spot.';
   document.getElementById('ovDead').style.display='flex';
 }
-
+ 
 // ═══════════════════════════════════════════════
 // LEADERBOARD
 // ═══════════════════════════════════════════════
 function getLB(){try{return JSON.parse(localStorage.getItem('sc_lb')||'[]');}catch{return[];}}
 function saveLB(lb){localStorage.setItem('sc_lb',JSON.stringify(lb));}
-
+ 
 function renderLB(){
   const lb=getLB();
   const el=document.getElementById('lbody');
@@ -619,26 +626,58 @@ function renderLB(){
     </div>`;
   }).join('');
 }
-
+ 
 function submitScore(){
   if(!wallet){toast('Connect your Phantom wallet first!',1);return;}
   const now=Date.now();
   if(!(now>=LAUNCH&&now<LAUNCH+SPRINT)){toast("The sprint hasn't started yet!",1);return;}
   const lb=getLB();
   const tag=wallet.slice(0,6)+'...'+wallet.slice(-4);
-  const idx=lb.findIndex(e=>e.w===tag);
+  const idx=lb.findIndex(e=>e.fw===wallet);
   if(idx>=0){
     if(lb[idx].s>=score){toast('You already have a higher score on the board!',1);return;}
     lb.splice(idx,1);
   }
-  lb.push({w:tag,s:score,t:new Date().toLocaleTimeString()});
+  // Store both truncated display name AND full wallet address
+  lb.push({w:tag, fw:wallet, s:score, t:new Date().toLocaleTimeString()});
   lb.sort((a,b)=>b.s-a.s); saveLB(lb); renderLB();
   document.getElementById('sbtn').disabled=true;
-  const rank=lb.findIndex(e=>e.w===tag)+1;
+  const rank=lb.findIndex(e=>e.fw===wallet)+1;
   toast(rank<=10?`🏆 You're rank #${rank}! Prize: ${PRIZE_LABELS[rank-1]}`:`Submitted! You're rank #${rank} — keep playing!`);
   document.getElementById('gorank').textContent=rank<=10?`RANK #${rank} — ${PRIZES[rank-1]}`:`RANK #${rank} — OUTSIDE TOP 10`;
 }
-
+ 
+// Check if sprint just ended and lock the game
+function checkSprintEnd(){
+  const now=Date.now();
+  if(LAUNCH>0 && now>=LAUNCH+SPRINT){
+    if(running){ running=false; showSprintEndOverlay(); }
+  }
+}
+ 
+function showSprintEndOverlay(){
+  const el=document.getElementById('ovDead');
+  document.getElementById('fscore').textContent=score.toLocaleString();
+  document.getElementById('gorank').textContent='SPRINT OVER — WINNERS LOCKED IN';
+  document.getElementById('gomsg').textContent='The 30-minute sprint has ended. Winners are being verified. Check back soon.';
+  document.getElementById('sbtn').style.display='none';
+  document.getElementById('ovDead').style.display='flex';
+}
+ 
+function renderWinnerPanel(){
+  const lb=getLB().slice(0,10);
+  if(!lb.length) return '<p style="color:var(--muted2);font-size:12px;font-family:Share Tech Mono">No scores submitted yet.</p>';
+  return lb.map((e,i)=>`
+    <div style="display:grid;grid-template-columns:28px 1fr 90px;gap:8px;align-items:center;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.06);font-family:Share Tech Mono;font-size:12px">
+      <span style="color:var(--gold);font-family:Press Start 2P;font-size:8px">#${i+1}</span>
+      <div>
+        <div style="color:#fff;margin-bottom:2px;word-break:break-all">${e.fw||e.w}</div>
+        <div style="color:var(--muted2);font-size:11px">Score: ${e.s.toLocaleString()} · ${PRIZE_LABELS[i]||'—'}</div>
+      </div>
+      <button onclick="navigator.clipboard.writeText('${e.fw||e.w}');toast('Copied!')" style="padding:5px 8px;background:rgba(0,255,136,.1);border:1px solid var(--g);color:var(--g);font-size:10px;cursor:pointer;border-radius:2px;font-family:Share Tech Mono">COPY</button>
+    </div>`).join('');
+}
+ 
 // ═══════════════════════════════════════════════
 // WALLET
 // ═══════════════════════════════════════════════
@@ -653,7 +692,7 @@ async function connectWallet(){
     toast('Wallet connected! You can now submit scores during the live sprint.');
   }catch{toast('Wallet connection was rejected.',1);}
 }
-
+ 
 // ═══════════════════════════════════════════════
 // INPUT
 // ═══════════════════════════════════════════════
@@ -665,7 +704,7 @@ addEventListener('keyup',e=>{
   if(e.key==='a'||e.key==='ArrowLeft') K.l=false;
   if(e.key==='d'||e.key==='ArrowRight') K.r=false;
 });
-
+ 
 // ═══════════════════════════════════════════════
 // TOAST
 // ═══════════════════════════════════════════════
@@ -674,7 +713,7 @@ function toast(msg,err=0){
   t.textContent=msg; t.className=err?'tok-err':'tok-ok'; t.style.display='block';
   clearTimeout(t._t); t._t=setTimeout(()=>t.style.display='none',3500);
 }
-
+ 
 // ═══════════════════════════════════════════════
 // BOOT
 // ═══════════════════════════════════════════════
@@ -691,3 +730,4 @@ window.onload=()=>{
 </script>
 </body>
 </html>
+ 
