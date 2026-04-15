@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" href="data:image/png;base64,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">
+<title>SLOPECOIN — 30-Minute Launch Sprint</title>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Share+Tech+Mono&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<style>
+:root{
+  --g:#00ff88;--r:#ff3355;--b:#00d4ff;--gold:#ffd700;
+  --bg:#04040d;--bg2:#080818;--bg3:#0d0d22;
+  --text:#ddeeff;--muted:#445588;--muted2:#7788aa;
+  --border:rgba(0,255,136,0.14);--border2:rgba(0,212,255,0.14);
+  --glow:0 0 22px rgba(0,255,136,.35);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;overflow-x:hidden;line-height:1.6}
+
+/* ── NAV ── */
+nav{position:fixed;top:0;width:100%;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:14px 40px;background:rgba(4,4,13,.96);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
+.logo{font-family:'Press Start 2P';color:var(--g);text-decoration:none;font-size:13px;letter-spacing:1px}
+.nav-links{display:flex;gap:28px;align-items:center}
+.nav-links a{color:var(--muted2);text-decoration:none;font-size:13px;font-weight:500;transition:.2s}
+.nav-links a:hover{color:var(--g)}
+#wbtn{padding:8px 16px;background:var(--g);color:#000;border:none;font-family:'Press Start 2P';font-size:9px;cursor:pointer;border-radius:3px;transition:.2s;white-space:nowrap}
+#wbtn:hover{box-shadow:var(--glow);transform:scale(1.04)}
+#wbtn.connected{background:var(--b)}
+
+/* ── SPRINT TICKER (fixed below nav) ── */
+#ticker{position:fixed;top:57px;width:100%;z-index:190;background:rgba(4,4,13,.92);border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:center;gap:20px;padding:7px 20px}
+#tickLabel{font-family:'Press Start 2P';font-size:8px;color:var(--g)}
+#tickLabel.live{color:var(--r);animation:pulse 1s infinite}
+#tickTime{font-family:'Share Tech Mono';font-size:18px;color:#fff;letter-spacing:3px;min-width:90px;text-align:center}
+.tick-dot{width:7px;height:7px;border-radius:50%;background:var(--g);animation:pulse 1.4s infinite}
+.tick-dot.live{background:var(--r)}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+
+/* ── HERO ── */
+#hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:120px 20px 60px;position:relative;overflow:hidden}
+#hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 50% 40%,rgba(0,255,136,.05) 0%,transparent 70%);pointer-events:none}
+.hero-eyebrow{font-family:'Press Start 2P';font-size:9px;color:var(--g);letter-spacing:3px;margin-bottom:22px;opacity:.8}
+.hero-title{font-family:'Press Start 2P';font-size:clamp(1.8rem,5vw,3.6rem);line-height:1.25;margin-bottom:18px}
+.hl{color:var(--g);text-shadow:0 0 30px rgba(0,255,136,.4)}
+.hl2{color:var(--b);text-shadow:0 0 30px rgba(0,212,255,.4)}
+.hero-sub{font-size:16px;color:var(--muted2);max-width:520px;margin:0 auto 36px;line-height:1.7}
+.hero-ctas{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.btn-main{padding:14px 32px;background:var(--g);color:#000;border:none;font-family:'Press Start 2P';font-size:11px;cursor:pointer;border-radius:3px;transition:.2s}
+.btn-main:hover{transform:scale(1.05);box-shadow:var(--glow)}
+.btn-outline{padding:14px 32px;background:transparent;color:var(--g);border:1px solid var(--g);font-family:'Press Start 2P';font-size:11px;cursor:pointer;border-radius:3px;transition:.2s}
+.btn-outline:hover{background:rgba(0,255,136,.08)}
+
+/* ── SECTION WRAPPER ── */
+.section{padding:80px 20px;max-width:960px;margin:0 auto}
+.section-sm{padding:60px 20px;max-width:760px;margin:0 auto}
+.sec-label{font-family:'Press Start 2P';font-size:8px;color:var(--g);letter-spacing:3px;margin-bottom:12px;opacity:.7}
+.sec-title{font-family:'Press Start 2P';font-size:clamp(1rem,3vw,1.5rem);margin-bottom:16px;line-height:1.5}
+.sec-body{color:var(--muted2);font-size:15px;line-height:1.8;max-width:600px}
+
+/* ── HOW IT WORKS ── */
+#how{background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:24px;margin-top:40px}
+.step{background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:24px 20px;position:relative}
+.step-num{font-family:'Press Start 2P';font-size:28px;color:var(--g);opacity:.15;position:absolute;top:14px;right:16px;line-height:1}
+.step-icon{font-size:28px;margin-bottom:12px}
+.step h3{font-family:'Press Start 2P';font-size:9px;color:var(--text);margin-bottom:10px;line-height:1.6}
+.step p{font-size:13px;color:var(--muted2);line-height:1.7}
+
+/* ── PRIZE POOL ── */
+#prizes{text-align:center}
+.prize-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:16px;margin-top:40px;max-width:760px;margin-left:auto;margin-right:auto}
+.prize-card{border-radius:8px;padding:24px 16px;border:1px solid;position:relative;overflow:hidden}
+.prize-card::before{content:'';position:absolute;inset:0;opacity:.06;background:currentColor}
+.prize-1{border-color:var(--gold);color:var(--gold)}
+.prize-2{border-color:#b0b0b0;color:#b0b0b0}
+.prize-3{border-color:#cd7f32;color:#cd7f32}
+.prize-rest{border-color:var(--border);color:var(--muted2)}
+.prize-rank{font-family:'Press Start 2P';font-size:9px;margin-bottom:10px;opacity:.8}
+.prize-pct{font-family:'Press Start 2P';font-size:22px;margin-bottom:6px}
+.prize-label{font-size:12px;opacity:.7}
+.prize-total{margin-top:28px;font-family:'Share Tech Mono';font-size:14px;color:var(--muted2)}
+.prize-total span{color:var(--g);font-size:16px}
+
+/* ── GAME SECTION ── */
+#game-wrap{background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:60px 20px}
+#game-inner{max-width:960px;margin:0 auto}
+.game-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;flex-wrap:wrap;gap:12px}
+.game-header h2{font-family:'Press Start 2P';font-size:12px;color:var(--text)}
+.game-badge{font-family:'Share Tech Mono';font-size:12px;padding:5px 12px;border-radius:20px;background:rgba(0,255,136,.1);border:1px solid var(--g);color:var(--g)}
+.game-badge.live{background:rgba(255,51,85,.1);border-color:var(--r);color:var(--r);animation:pulse 1s infinite}
+
+.gcont{position:relative;width:100%;aspect-ratio:16/9;border:1px solid var(--border);overflow:hidden;background:#000;border-radius:4px}
+canvas{width:100%!important;height:100%!important;display:block}
+.gcont::after{content:'';position:absolute;inset:0;pointer-events:none;z-index:4;background:repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(0,0,0,.06) 2px,rgba(0,0,0,.06) 4px);border-radius:4px}
+
+#ghud{position:absolute;inset:0;pointer-events:none;z-index:5;padding:10px 14px;display:flex;justify-content:space-between;align-items:flex-start}
+.gh-l{font-family:'Press Start 2P';font-size:10px;color:var(--g);text-shadow:0 0 8px rgba(0,255,136,.5);line-height:2}
+.gh-r{font-family:'Press Start 2P';font-size:10px;color:var(--b);text-align:right;line-height:2}
+#hint{position:absolute;bottom:10px;left:50%;transform:translateX(-50%);font-family:'Share Tech Mono';font-size:11px;color:var(--muted);white-space:nowrap;z-index:5}
+#flash{position:absolute;inset:0;z-index:6;opacity:0;pointer-events:none;background:rgba(255,51,85,.38);transition:opacity .06s;border-radius:4px}
+
+.ov{position:absolute;inset:0;z-index:10;background:rgba(4,4,13,.92);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;border-radius:4px}
+.ov h2{font-family:'Press Start 2P';font-size:16px}
+.ov p{font-family:'Share Tech Mono';font-size:12px;color:var(--muted2);text-align:center;max-width:400px;line-height:1.9}
+.btn-game{padding:13px 30px;background:var(--g);color:#000;border:none;font-family:'Press Start 2P';font-size:11px;cursor:pointer;border-radius:3px;transition:.2s}
+.btn-game:hover{transform:scale(1.04);box-shadow:var(--glow)}
+.btn-game:disabled{background:#1a1a2e;color:#334;cursor:default;transform:none;box-shadow:none;border:1px solid var(--border)}
+.btn-ghost{padding:10px 20px;background:transparent;color:var(--g);border:1px solid var(--g);font-family:'Press Start 2P';font-size:9px;cursor:pointer;border-radius:3px;transition:.2s}
+.btn-ghost:hover{background:rgba(0,255,136,.08)}
+#fscore{font-family:'Share Tech Mono';font-size:44px;color:var(--g);text-shadow:0 0 20px rgba(0,255,136,.5);line-height:1}
+#gorank{font-family:'Press Start 2P';font-size:10px;color:var(--gold);margin-top:-4px}
+#srow{display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
+
+/* ── LEADERBOARD ── */
+#lb-section{text-align:center}
+.lb-wrap{max-width:700px;margin:36px auto 0;background:var(--bg2);border:1px solid var(--border);border-radius:8px;overflow:hidden}
+.lb-head{display:grid;grid-template-columns:48px 1fr 120px 100px;padding:12px 20px;border-bottom:1px solid var(--border);background:rgba(0,0,0,.3)}
+.lb-head span{font-family:'Press Start 2P';font-size:8px;color:var(--muted);text-transform:uppercase;letter-spacing:1px}
+.lb-row{display:grid;grid-template-columns:48px 1fr 120px 100px;padding:14px 20px;border-bottom:1px solid rgba(255,255,255,.04);align-items:center;transition:.15s}
+.lb-row:last-child{border-bottom:none}
+.lb-row:hover{background:rgba(255,255,255,.02)}
+.lb-row.r1{background:rgba(255,215,0,.04)}
+.lb-row.r2{background:rgba(180,180,180,.03)}
+.lb-row.r3{background:rgba(205,127,50,.03)}
+.lb-rank{font-family:'Press Start 2P';font-size:9px}
+.r1 .lb-rank{color:var(--gold)}.r2 .lb-rank{color:#bbb}.r3 .lb-rank{color:#cd7f32}
+.lb-wallet{font-family:'Share Tech Mono';font-size:13px;color:var(--text)}
+.lb-score{font-family:'Share Tech Mono';font-size:14px;color:var(--g);font-weight:600}
+.lb-prize{font-family:'Share Tech Mono';font-size:12px}
+.r1 .lb-prize{color:var(--gold)}.r2 .lb-prize{color:#bbb}.r3 .lb-prize{color:#cd7f32}
+.lb-prize.small{color:var(--muted2)}
+.lb-empty{padding:36px;text-align:center;font-family:'Share Tech Mono';font-size:13px;color:var(--muted)}
+
+/* ── FOOTER ── */
+footer{padding:40px 20px;text-align:center;border-top:1px solid var(--border)}
+footer p{font-size:12px;color:var(--muted);line-height:2}
+footer a{color:var(--muted2);text-decoration:none}
+footer a:hover{color:var(--g)}
+
+/* ── TOAST ── */
+#toast{position:fixed;bottom:20px;right:20px;padding:12px 18px;font-family:'Share Tech Mono';font-size:13px;border-radius:4px;display:none;z-index:999;max-width:300px}
+.tok-ok{background:var(--g);color:#000}.tok-err{background:var(--r);color:#fff}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="logo" onclick="logoClick();return false;">SLOPECOIN</a>
+  <div class="nav-links">
+    <a href="#how">How It Works</a>
+    <a href="#prizes">Prizes</a>
+    <a href="#game-wrap">Play</a>
+    <a href="#lb-section">Leaderboard</a>
+    <span id="caDisplay" style="display:none;font-family:'Share Tech Mono';font-size:11px;color:var(--g);background:rgba(0,255,136,.08);border:1px solid var(--border);padding:4px 10px;border-radius:3px"></span>
+  </div>
+  <button id="wbtn" onclick="connectWallet()">CONNECT PHANTOM</button>
+</nav>
+
+<!-- ADMIN PANEL (hidden, reveal by clicking logo 5x) -->
+<div id="adminPanel" style="display:none;position:fixed;top:57px;left:50%;transform:translateX(-50%);z-index:300;background:#080818;border:1px solid var(--g);border-radius:6px;padding:20px 24px;min-width:380px;flex-direction:column;gap:12px;box-shadow:0 0 30px rgba(0,255,136,.2)">
+  <div style="font-family:'Press Start 2P';font-size:9px;color:var(--g)">🔑 LAUNCH CONTROL</div>
+  <div style="font-family:'Share Tech Mono';font-size:12px;color:var(--muted2)">Paste your contract address to start the 30-minute sprint timer instantly.</div>
+  <input id="caInput" type="text" placeholder="Paste contract address (CA)..." style="font-family:'Share Tech Mono';font-size:13px;padding:10px 14px;background:#04040d;border:1px solid var(--border);color:var(--text);border-radius:3px;outline:none;width:100%" onfocus="this.style.borderColor='var(--g)'" onblur="this.style.borderColor='var(--border)'">
+  <div style="display:flex;gap:10px">
+    <button onclick="setLaunch(document.getElementById('caInput').value)" style="flex:1;padding:10px;background:var(--g);color:#000;border:none;font-family:'Press Start 2P';font-size:9px;cursor:pointer;border-radius:3px">🚀 GO LIVE NOW</button>
+    <button onclick="resetLaunch()" style="padding:10px 14px;background:transparent;color:var(--r);border:1px solid var(--r);font-family:'Press Start 2P';font-size:9px;cursor:pointer;border-radius:3px">RESET</button>
+    <button onclick="document.getElementById('adminPanel').style.display='none'" style="padding:10px 14px;background:transparent;color:var(--muted2);border:1px solid var(--border);font-family:'Press Start 2P';font-size:9px;cursor:pointer;border-radius:3px">✕</button>
+  </div>
+</div>
+
+<!-- SPRINT TICKER -->
+<div id="ticker">
+  <div class="tick-dot" id="tickDot"></div>
+  <div id="tickLabel">SPRINT STARTS IN</div>
+  <div id="tickTime">00:00:00</div>
+</div>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-eyebrow">SOLANA · MEMECOIN · LAUNCH EVENT</div>
+  <h1 class="hero-title">
+    PLAY THE GAME.<br>
+    <span class="hl">WIN THE AIRDROP.</span>
+  </h1>
+  <p class="hero-sub">
+    SLOPECOIN launches with a 30-minute live sprint. The top 10 players on the leaderboard when the timer hits zero split <strong style="color:var(--g)">6.25% of the total supply</strong>. Play as many times as you want — only your best score counts.
+  </p>
+  <div class="hero-ctas">
+    <button class="btn-main" onclick="document.getElementById('game-wrap').scrollIntoView({behavior:'smooth'})">PLAY NOW — FREE</button>
+    <button class="btn-outline" onclick="document.getElementById('how').scrollIntoView({behavior:'smooth'})">HOW IT WORKS</button>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<div id="how">
+  <div class="section">
+    <div class="sec-label">THE RULES</div>
+    <h2 class="sec-title">Simple. Fast. One chance.</h2>
+    <p class="sec-body">No staking, no whitelists, no presale. Just a game and a timer. Here's everything you need to know.</p>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">01</div>
+        <div class="step-icon">👻</div>
+        <h3>Connect Your<br>Phantom Wallet</h3>
+        <p>Hit "Connect Phantom" at the top. This only reads your public wallet address — nothing is signed, nothing is spent.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">02</div>
+        <div class="step-icon">🎮</div>
+        <h3>Practice the<br>Game Now</h3>
+        <p>Play anytime to get comfortable. Use A/D or arrow keys to steer. Don't fall off the track or hit obstacles. Infinite tries — keep going until the timer runs out.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">03</div>
+        <div class="step-icon">⏱</div>
+        <h3>Be Ready at<br>Launch Time</h3>
+        <p>When the sprint goes live the leaderboard opens. Submit your score with your connected wallet. Only live-sprint scores count.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">04</div>
+        <div class="step-icon">🏆</div>
+        <h3>Hold Your Rank<br>for 30 Minutes</h3>
+        <p>Anyone can beat you before the clock hits zero. The snapshot is taken at exactly 30:00. Top 10 wallets win.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PRIZE POOL -->
+<div id="prizes">
+  <div class="section" style="text-align:center">
+    <div class="sec-label">PRIZE POOL</div>
+    <h2 class="sec-title">What's up for grabs</h2>
+    <p class="sec-body" style="margin:0 auto">Prizes are distributed automatically to the winning wallet addresses at the end of the sprint. No claiming, no forms.</p>
+    <div class="prize-grid">
+      <div class="prize-card prize-1">
+        <div class="prize-rank">🥇 1ST PLACE</div>
+        <div class="prize-pct">2%</div>
+        <div class="prize-label">of total supply</div>
+      </div>
+      <div class="prize-card prize-2">
+        <div class="prize-rank">🥈 2ND PLACE</div>
+        <div class="prize-pct">1.5%</div>
+        <div class="prize-label">of total supply</div>
+      </div>
+      <div class="prize-card prize-3">
+        <div class="prize-rank">🥉 3RD PLACE</div>
+        <div class="prize-pct">1%</div>
+        <div class="prize-label">of total supply</div>
+      </div>
+      <div class="prize-card prize-rest">
+        <div class="prize-rank">4TH – 10TH</div>
+        <div class="prize-pct">0.25%</div>
+        <div class="prize-label">each · 7 winners</div>
+      </div>
+    </div>
+    <p class="prize-total">Total airdrop pool: <span>6.25%</span> of supply · One wallet, one entry</p>
+  </div>
+</div>
+
+<!-- GAME -->
+<div id="game-wrap">
+  <div id="game-inner">
+    <div class="game-header">
+      <h2>THE SPRINT ARENA</h2>
+      <div class="game-badge" id="gameBadge">PRACTICE MODE</div>
+    </div>
+    <div class="gcont" id="gcont">
+      <canvas id="gc"></canvas>
+      <div id="flash"></div>
+      <div id="ghud">
+        <div class="gh-l">SCORE: <span id="sv">0</span><br>BEST:&nbsp; <span id="bv">0</span></div>
+        <div class="gh-r">SPEED: <span id="spv">1.0</span>x</div>
+      </div>
+      <div id="hint">← A &nbsp;|&nbsp; D → &nbsp;&nbsp;&nbsp; INFINITE TRIES · SUBMIT YOUR BEST</div>
+
+      <!-- START OVERLAY -->
+      <div class="ov" id="ovStart">
+        <h2 style="color:var(--g)">READY TO RACE?</h2>
+        <p>
+          Steer with <strong style="color:#fff">A / D</strong> or <strong style="color:#fff">← →</strong><br>
+          Stay on the track · Dodge red obstacles<br>
+          Infinite tries — submit your best score<br><br>
+          <span style="color:var(--muted)">Connect your wallet before the sprint goes live<br>to submit your score to the leaderboard.</span>
+        </p>
+        <button class="btn-game" onclick="startGame()">START GAME</button>
+      </div>
+
+      <!-- GAME OVER OVERLAY -->
+      <div class="ov" id="ovDead" style="display:none">
+        <h2 style="color:var(--r)">GAME OVER</h2>
+        <div id="fscore">0</div>
+        <div id="gorank"></div>
+        <p id="gomsg">Connect your wallet and play during the live sprint to submit a real score.</p>
+        <div id="srow">
+          <button class="btn-game" id="sbtn" onclick="submitScore()" disabled>SUBMIT SCORE</button>
+          <button class="btn-ghost" onclick="restartGame()">TRY AGAIN</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- LEADERBOARD -->
+<div id="lb-section">
+  <div class="section" style="text-align:center">
+    <div class="sec-label">LIVE STANDINGS</div>
+    <h2 class="sec-title">Leaderboard</h2>
+    <p class="sec-body" style="margin:0 auto">Updated in real time during the sprint. The snapshot is taken at exactly 30:00. Prize column shows what each wallet wins if the sprint ended right now.</p>
+    <div class="lb-wrap">
+      <div class="lb-head">
+        <span>RANK</span><span style="text-align:left">WALLET</span><span>SCORE</span><span>PRIZE</span>
+      </div>
+      <div id="lbody">
+        <div class="lb-empty">No scores yet — be the first to play!</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <p style="font-family:'Press Start 2P';font-size:10px;color:var(--g);margin-bottom:16px">SLOPECOIN</p>
+  <p>Not financial advice. Memecoins are highly speculative assets. Only participate with what you can afford to lose.<br>
+  Contract address will be published at launch. Verify everything on-chain before buying.</p>
+</footer>
+
+<div id="toast"></div>
+
+<script>
+// ═══════════════════════════════════════════════
+// CONFIG
+// ═══════════════════════════════════════════════
+const SPRINT = 30 * 60 * 1000;
+
+const PRIZES = ['2%','1.5%','1%','0.25%','0.25%','0.25%','0.25%','0.25%','0.25%','0.25%'];
+const PRIZE_LABELS = ['🥇 2% supply','🥈 1.5% supply','🥉 1% supply','0.25% supply','0.25% supply','0.25% supply','0.25% supply','0.25% supply','0.25% supply','0.25% supply'];
+
+// LAUNCH is set when you paste the CA. Stored in localStorage so it survives refresh.
+let LAUNCH = parseInt(localStorage.getItem('sc_launch') || '0');
+
+function setLaunch(ca) {
+  if (!ca || ca.trim().length < 10) { toast('Enter a valid contract address', 1); return; }
+  LAUNCH = Date.now();
+  localStorage.setItem('sc_launch', LAUNCH);
+  localStorage.setItem('sc_ca', ca.trim());
+  document.getElementById('caDisplay').textContent = ca.trim().slice(0,6)+'...'+ca.trim().slice(-4);
+  document.getElementById('caDisplay').style.display = 'inline';
+  document.getElementById('adminPanel').style.display = 'none';
+  toast('🚀 Sprint is LIVE! Timer started.');
+  tickTimer();
+}
+
+function resetLaunch() {
+  localStorage.removeItem('sc_launch');
+  localStorage.removeItem('sc_ca');
+  LAUNCH = 0;
+  document.getElementById('caDisplay').style.display = 'none';
+  document.getElementById('caInput').value = '';
+  document.getElementById('adminPanel').style.display = 'none';
+  toast('Sprint reset.');
+  tickTimer();
+}
+
+// Secret admin panel — click logo 5 times
+let logoClicks = 0, logoTimer;
+function logoClick() {
+  logoClicks++;
+  clearTimeout(logoTimer);
+  logoTimer = setTimeout(() => logoClicks = 0, 2000);
+  if (logoClicks >= 5) {
+    logoClicks = 0;
+    const p = document.getElementById('adminPanel');
+    p.style.display = p.style.display === 'none' ? 'flex' : 'none';
+  }
+}
+
+// ═══════════════════════════════════════════════
+// GAME CONSTANTS
+// ═══════════════════════════════════════════════
+const SEG_W    = 7;
+const SEG_D    = 5;
+const SEG_STEP = 4.8;
+const CURVE_A  = 5;
+const CURVE_F  = 0.028;
+const TRACK_Y  = -1;
+const SURF_Y   = TRACK_Y + 0.21;
+const BALL_R   = 0.34;
+const BASE_SPD = 0.12;
+
+// ═══════════════════════════════════════════════
+// SPRINT TIMER
+// ═══════════════════════════════════════════════
+function tickTimer() {
+  const now = Date.now();
+  const lab  = document.getElementById('tickLabel');
+  const val  = document.getElementById('tickTime');
+  const dot  = document.getElementById('tickDot');
+  const badge = document.getElementById('gameBadge');
+
+  if (now < LAUNCH) {
+    lab.className = ''; dot.className = 'tick-dot';
+    lab.textContent = 'SPRINT STARTS IN';
+    val.textContent = ms2t(LAUNCH - now);
+    badge.className = 'game-badge'; badge.textContent = 'PRACTICE MODE';
+  } else if (now < LAUNCH + SPRINT) {
+    lab.className = 'live'; dot.className = 'tick-dot live';
+    lab.textContent = 'SPRINT ENDS IN';
+    val.textContent = ms2t(LAUNCH + SPRINT - now);
+    badge.className = 'game-badge live'; badge.textContent = '🔴 LIVE SPRINT';
+  } else {
+    lab.className = ''; dot.className = 'tick-dot';
+    lab.textContent = 'SPRINT FINISHED';
+    val.textContent = '00:00:00';
+    badge.className = 'game-badge'; badge.textContent = 'SPRINT OVER';
+  }
+}
+function ms2t(ms) {
+  const h=ms/3600000|0, m=(ms%3600000)/60000|0, s=(ms%60000)/1000|0;
+  return `${z2(h)}:${z2(m)}:${z2(s)}`;
+}
+function z2(n){return String(n).padStart(2,'0')}
+setInterval(tickTimer, 1000); tickTimer();
+
+// ═══════════════════════════════════════════════
+// THREE.JS
+// ═══════════════════════════════════════════════
+let renderer, scene, camera, ballMesh;
+let segments = [], obstacles = [];
+let score = 0, best = 0, spd = BASE_SPD, running = false;
+let bx=0, by=SURF_Y+BALL_R, bz=0, vx=0;
+let falling=false, fallTimer=0;
+let nextSegZ=0, wallet=null;
+const K={l:false,r:false};
+
+const segMat  = new THREE.MeshStandardMaterial({color:0x111822,roughness:.9,metalness:.05});
+const edgeMat = new THREE.MeshStandardMaterial({color:0x00ff88,emissive:0x00ff88,emissiveIntensity:.22});
+const wallMat = new THREE.MeshStandardMaterial({color:0xff3355,emissive:0xff2233,emissiveIntensity:.5});
+const spkMat  = new THREE.MeshStandardMaterial({color:0xff6600,emissive:0xff4400,emissiveIntensity:.5});
+
+function tcx(z){return Math.sin(z*CURVE_F)*CURVE_A;}
+function drand(z,s){let v=Math.sin(z*1237.1+s*491.3)*83758.5;return v-Math.floor(v);}
+
+function init3(){
+  const el=document.getElementById('gcont');
+  renderer=new THREE.WebGLRenderer({canvas:document.getElementById('gc'),antialias:true});
+  renderer.setSize(el.clientWidth,el.clientHeight);
+  renderer.setPixelRatio(Math.min(devicePixelRatio,2));
+  scene=new THREE.Scene();
+  scene.background=new THREE.Color(0x04040d);
+  scene.fog=new THREE.Fog(0x04040d,28,70);
+  camera=new THREE.PerspectiveCamera(65,el.clientWidth/el.clientHeight,0.1,120);
+  camera.position.set(0,5,10);
+  camera.lookAt(0,0,-8);
+
+  ballMesh=new THREE.Mesh(
+    new THREE.SphereGeometry(BALL_R,20,20),
+    new THREE.MeshStandardMaterial({color:0x00ff88,emissive:0x00ff88,emissiveIntensity:.7,roughness:.2,metalness:.4})
+  );
+  scene.add(ballMesh);
+  ballMesh.add(new THREE.PointLight(0x00ff88,1.8,7));
+  scene.add(new THREE.AmbientLight(0x112233,1.4));
+  const dl=new THREE.DirectionalLight(0x3355ff,.8);
+  dl.position.set(4,12,8); scene.add(dl);
+
+  const sv=[];
+  for(let i=0;i<700;i++) sv.push((Math.random()-.5)*200,Math.random()*35+4,(Math.random()-.5)*200);
+  const sg=new THREE.BufferGeometry();
+  sg.setAttribute('position',new THREE.Float32BufferAttribute(sv,3));
+  scene.add(new THREE.Points(sg,new THREE.PointsMaterial({color:0x5566aa,size:.12})));
+
+  nextSegZ=0;
+  for(let i=0;i<60;i++) spawnSeg();
+  window.addEventListener('resize',onResize);
+  requestAnimationFrame(frame);
+}
+
+function spawnSeg(){
+  const z=nextSegZ, cx=tcx(z);
+  nextSegZ-=SEG_STEP;
+  const m=new THREE.Mesh(new THREE.BoxGeometry(SEG_W,.42,SEG_D),segMat.clone());
+  m.position.set(cx,TRACK_Y,z);
+  for(const ex of [-SEG_W/2,SEG_W/2]){
+    const e=new THREE.Mesh(new THREE.BoxGeometry(.08,.46,SEG_D),edgeMat);
+    e.position.x=ex; m.add(e);
+  }
+  scene.add(m); segments.push({mesh:m,cx,z});
+  if(z<-30){
+    const r=drand(z,7);
+    if(r<.26){
+      const kind=drand(z,13)<.5?'wall':'spike';
+      let geo,ox=cx,oy;
+      if(kind==='wall'){geo=new THREE.BoxGeometry(1.6,1.3,.42);ox+=drand(z,19)<.5?-1.8:1.8;oy=SURF_Y+.65;}
+      else{geo=new THREE.ConeGeometry(.28,.95,7);oy=SURF_Y+.475;}
+      const om=new THREE.Mesh(geo,kind==='wall'?wallMat:spkMat);
+      om.position.set(ox,oy,z); scene.add(om);
+      obstacles.push({mesh:om,cx:ox,z,kind,dead:false});
+    }
+  }
+}
+
+function frame(){requestAnimationFrame(frame);if(running)tick();renderer.render(scene,camera);}
+
+function tick(){
+  const tSpd=Math.min(BASE_SPD+Math.floor(score/500)*.015,.38);
+  spd+=(tSpd-spd)*.012;
+  bz-=spd; score=Math.floor(-bz);
+  document.getElementById('sv').textContent=score;
+  document.getElementById('spv').textContent=(spd/BASE_SPD).toFixed(1);
+
+  if(K.l) vx-=.017; if(K.r) vx+=.017;
+  if(!K.l&&!K.r) vx*=.78;
+  vx=Math.max(-.18,Math.min(.18,vx)); bx+=vx;
+
+  if(!falling){
+    const seg=segAt(bz);
+    if(seg){if(Math.abs(bx-seg.cx)>SEG_W/2+.12) startFall();}
+    else startFall();
+  }
+  if(falling){
+    fallTimer++; by-=.05*fallTimer*.4; bx+=vx*.2;
+    if(fallTimer>28){gameOver();return;}
+  }
+  if(!falling){
+    for(const o of obstacles){
+      if(o.dead) continue;
+      const dz=Math.abs(o.z-bz),dx=Math.abs(o.cx-bx);
+      const hz=o.kind==='spike'?.72:.68,hx=o.kind==='spike'?.58:.62;
+      if(dz<hz&&dx<hx){gameOver();return;}
+    }
+  }
+
+  ballMesh.position.set(bx,by,bz);
+  ballMesh.rotation.z-=spd*2.8; ballMesh.rotation.x+=vx*.8;
+  camera.position.x+=(bx*.5-camera.position.x)*.10;
+  camera.position.z+=(bz+10-camera.position.z)*.12;
+  camera.position.y=5; camera.lookAt(bx*.3,.5,bz-7);
+
+  while(nextSegZ>bz-80) spawnSeg();
+  const cut=bz+28;
+  while(segments.length&&segments[0].z>cut){const s=segments.shift();if(s.mesh){scene.remove(s.mesh);dispose(s.mesh);}}
+  for(let i=obstacles.length-1;i>=0;i--){if(obstacles[i].z>cut){const o=obstacles.splice(i,1)[0];if(o.mesh){scene.remove(o.mesh);dispose(o.mesh);}}}
+}
+
+function segAt(z){for(const s of segments){if(Math.abs(s.z-z)<SEG_D*.55)return s;}return null;}
+function startFall(){falling=true;fallTimer=0;}
+function dispose(m){if(!m)return;m.geometry&&m.geometry.dispose();(Array.isArray(m.material)?m.material:[m.material]).forEach(mt=>mt&&mt.dispose&&mt.dispose());m.children.forEach(dispose);}
+function onResize(){const el=document.getElementById('gcont');camera.aspect=el.clientWidth/el.clientHeight;camera.updateProjectionMatrix();renderer.setSize(el.clientWidth,el.clientHeight);}
+
+// ═══════════════════════════════════════════════
+// GAME FLOW
+// ═══════════════════════════════════════════════
+function startGame(){
+  segments.forEach(s=>{if(s.mesh){scene.remove(s.mesh);dispose(s.mesh);}});
+  obstacles.forEach(o=>{if(o.mesh){scene.remove(o.mesh);dispose(o.mesh);}});
+  segments=[];obstacles=[];
+  bx=0;bz=0;by=SURF_Y+BALL_R;vx=0;
+  falling=false;fallTimer=0;score=0;spd=BASE_SPD;
+  K.l=false;K.r=false;
+  nextSegZ=0; for(let i=0;i<60;i++) spawnSeg();
+  camera.position.set(0,5,10);
+  document.getElementById('sv').textContent='0';
+  document.getElementById('ovStart').style.display='none';
+  document.getElementById('ovDead').style.display='none';
+  running=true;
+}
+
+function restartGame(){
+  document.getElementById('ovDead').style.display='none';
+  startGame();
+}
+
+function gameOver(){
+  running=false;
+  if(score>best){best=score;document.getElementById('bv').textContent=best;}
+  document.getElementById('fscore').textContent=score.toLocaleString();
+
+  const now=Date.now(), live=now>=LAUNCH&&now<LAUNCH+SPRINT;
+
+  // Show projected rank
+  const lb=getLB();
+  const projRank=lb.filter(e=>e.s>score).length+1;
+  const rankEl=document.getElementById('gorank');
+  if(live&&wallet){
+    if(projRank<=10) rankEl.textContent=`YOU WOULD BE RANK #${projRank} — ${PRIZES[projRank-1]}`;
+    else rankEl.textContent=`RANK #${projRank} — OUTSIDE TOP 10`;
+  } else { rankEl.textContent=''; }
+
+  document.getElementById('sbtn').disabled=!(wallet&&live);
+  document.getElementById('gomsg').textContent=
+    !wallet?'Connect your Phantom wallet to submit your score during the live sprint.':
+    !live?'This is practice mode — scores won\'t count until the sprint goes live.':
+    'LIVE SPRINT! Submit your score to claim your spot.';
+  document.getElementById('ovDead').style.display='flex';
+}
+
+// ═══════════════════════════════════════════════
+// LEADERBOARD
+// ═══════════════════════════════════════════════
+function getLB(){try{return JSON.parse(localStorage.getItem('sc_lb')||'[]');}catch{return[];}}
+function saveLB(lb){localStorage.setItem('sc_lb',JSON.stringify(lb));}
+
+function renderLB(){
+  const lb=getLB();
+  const el=document.getElementById('lbody');
+  if(!lb.length){el.innerHTML='<div class="lb-empty">No scores yet — connect your wallet and play to get on the board!</div>';return;}
+  el.innerHTML=lb.slice(0,10).map((e,i)=>{
+    const prizeClass=i<3?`r${i+1}`:'';
+    const prizeText=i<10?PRIZE_LABELS[i]:'—';
+    const prizeSmall=i>=3?' small':'';
+    return `<div class="lb-row ${prizeClass}">
+      <div class="lb-rank">#${i+1}</div>
+      <div class="lb-wallet">${e.w}</div>
+      <div class="lb-score">${e.s.toLocaleString()}</div>
+      <div class="lb-prize${prizeSmall}">${prizeText}</div>
+    </div>`;
+  }).join('');
+}
+
+function submitScore(){
+  if(!wallet){toast('Connect your Phantom wallet first!',1);return;}
+  const now=Date.now();
+  if(!(now>=LAUNCH&&now<LAUNCH+SPRINT)){toast("The sprint hasn't started yet!",1);return;}
+  const lb=getLB();
+  const tag=wallet.slice(0,6)+'...'+wallet.slice(-4);
+  const idx=lb.findIndex(e=>e.w===tag);
+  if(idx>=0){
+    if(lb[idx].s>=score){toast('You already have a higher score on the board!',1);return;}
+    lb.splice(idx,1);
+  }
+  lb.push({w:tag,s:score,t:new Date().toLocaleTimeString()});
+  lb.sort((a,b)=>b.s-a.s); saveLB(lb); renderLB();
+  document.getElementById('sbtn').disabled=true;
+  const rank=lb.findIndex(e=>e.w===tag)+1;
+  toast(rank<=10?`🏆 You're rank #${rank}! Prize: ${PRIZE_LABELS[rank-1]}`:`Submitted! You're rank #${rank} — keep playing!`);
+  document.getElementById('gorank').textContent=rank<=10?`RANK #${rank} — ${PRIZES[rank-1]}`:`RANK #${rank} — OUTSIDE TOP 10`;
+}
+
+// ═══════════════════════════════════════════════
+// WALLET
+// ═══════════════════════════════════════════════
+async function connectWallet(){
+  if(!window.phantom?.solana){toast('Please install the Phantom wallet extension first!',1);return;}
+  try{
+    const r=await window.phantom.solana.connect();
+    wallet=r.publicKey.toString();
+    const b=document.getElementById('wbtn');
+    b.textContent=wallet.slice(0,4)+'...'+wallet.slice(-4);
+    b.classList.add('connected');
+    toast('Wallet connected! You can now submit scores during the live sprint.');
+  }catch{toast('Wallet connection was rejected.',1);}
+}
+
+// ═══════════════════════════════════════════════
+// INPUT
+// ═══════════════════════════════════════════════
+addEventListener('keydown',e=>{
+  if(e.key==='a'||e.key==='ArrowLeft') K.l=true;
+  if(e.key==='d'||e.key==='ArrowRight') K.r=true;
+});
+addEventListener('keyup',e=>{
+  if(e.key==='a'||e.key==='ArrowLeft') K.l=false;
+  if(e.key==='d'||e.key==='ArrowRight') K.r=false;
+});
+
+// ═══════════════════════════════════════════════
+// TOAST
+// ═══════════════════════════════════════════════
+function toast(msg,err=0){
+  const t=document.getElementById('toast');
+  t.textContent=msg; t.className=err?'tok-err':'tok-ok'; t.style.display='block';
+  clearTimeout(t._t); t._t=setTimeout(()=>t.style.display='none',3500);
+}
+
+// ═══════════════════════════════════════════════
+// BOOT
+// ═══════════════════════════════════════════════
+window.onload=()=>{
+  init3(); renderLB();
+  // Restore CA display if sprint was already started
+  const savedCA = localStorage.getItem('sc_ca');
+  if (savedCA) {
+    document.getElementById('caDisplay').textContent = savedCA.slice(0,6)+'...'+savedCA.slice(-4);
+    document.getElementById('caDisplay').style.display = 'inline';
+    document.getElementById('caInput').value = savedCA;
+  }
+};
+</script>
+</body>
+</html>
