@@ -160,7 +160,7 @@ footer a:hover{color:var(--g)}
 </nav>
  
 <!-- ADMIN PANEL (hidden, reveal by clicking logo 5x) -->
-<div id="adminPanel" style="display:none;position:fixed;top:57px;left:50%;transform:translateX(-50%);z-index:300;background:#080818;border:1px solid var(--g);border-radius:6px;padding:20px 24px;min-width:380px;flex-direction:column;gap:12px;box-shadow:0 0 30px rgba(0,255,136,.2)">
+<div id="adminPanel" style="display:none;position:fixed;top:57px;left:50%;transform:translateX(-50%);z-index:300;background:#080818;border:1px solid var(--g);border-radius:6px;padding:20px 24px;width:min(520px,92vw);flex-direction:column;gap:12px;box-shadow:0 0 30px rgba(0,255,136,.2);max-height:80vh;overflow-y:auto">
   <div style="font-family:'Press Start 2P';font-size:9px;color:var(--g)">🔑 LAUNCH CONTROL</div>
   <div style="font-family:'Share Tech Mono';font-size:12px;color:var(--muted2)">Paste your contract address to start the 30-minute sprint timer instantly.</div>
   <input id="caInput" type="text" placeholder="Paste contract address (CA)..." style="font-family:'Share Tech Mono';font-size:13px;padding:10px 14px;background:#04040d;border:1px solid var(--border);color:var(--text);border-radius:3px;outline:none;width:100%" onfocus="this.style.borderColor='var(--g)'" onblur="this.style.borderColor='var(--border)'">
@@ -168,6 +168,11 @@ footer a:hover{color:var(--g)}
     <button onclick="setLaunch(document.getElementById('caInput').value)" style="flex:1;padding:10px;background:var(--g);color:#000;border:none;font-family:'Press Start 2P';font-size:9px;cursor:pointer;border-radius:3px">🚀 GO LIVE NOW</button>
     <button onclick="resetLaunch()" style="padding:10px 14px;background:transparent;color:var(--r);border:1px solid var(--r);font-family:'Press Start 2P';font-size:9px;cursor:pointer;border-radius:3px">RESET</button>
     <button onclick="document.getElementById('adminPanel').style.display='none'" style="padding:10px 14px;background:transparent;color:var(--muted2);border:1px solid var(--border);font-family:'Press Start 2P';font-size:9px;cursor:pointer;border-radius:3px">✕</button>
+  </div>
+  <!-- Winner payout section — visible after sprint ends -->
+  <div id="winnerPanel" style="display:none;border-top:1px solid var(--border);padding-top:14px;margin-top:4px">
+    <div style="font-family:'Press Start 2P';font-size:9px;color:var(--gold);margin-bottom:10px">🏆 WINNER WALLETS — SEND PRIZES TO THESE ADDRESSES</div>
+    <div id="winnerList"></div>
   </div>
 </div>
  
@@ -186,7 +191,7 @@ footer a:hover{color:var(--g)}
     <span class="hl">WIN THE AIRDROP.</span>
   </h1>
   <p class="hero-sub">
-    SLOPECOIN launches with a 30-minute live sprint. The top 10 players on the leaderboard when the timer hits zero split <strong style="color:var(--g)">6.25% of the total supply</strong>. Play as many times as you want — only your best score counts.
+    SLOPECOIN launches with a 30-minute live sprint. The top 10 players on the leaderboard when the timer hits zero split <strong style="color:var(--g)">1% of the total supply</strong>. Play as many times as you want — only your best score counts.
   </p>
   <div class="hero-ctas">
     <button class="btn-main" onclick="document.getElementById('game-wrap').scrollIntoView({behavior:'smooth'})">PLAY NOW — FREE</button>
@@ -238,26 +243,26 @@ footer a:hover{color:var(--g)}
     <div class="prize-grid">
       <div class="prize-card prize-1">
         <div class="prize-rank">🥇 1ST PLACE</div>
-        <div class="prize-pct">2%</div>
+        <div class="prize-pct">0.4%</div>
         <div class="prize-label">of total supply</div>
       </div>
       <div class="prize-card prize-2">
         <div class="prize-rank">🥈 2ND PLACE</div>
-        <div class="prize-pct">1.5%</div>
+        <div class="prize-pct">0.25%</div>
         <div class="prize-label">of total supply</div>
       </div>
       <div class="prize-card prize-3">
         <div class="prize-rank">🥉 3RD PLACE</div>
-        <div class="prize-pct">1%</div>
+        <div class="prize-pct">0.15%</div>
         <div class="prize-label">of total supply</div>
       </div>
       <div class="prize-card prize-rest">
         <div class="prize-rank">4TH – 10TH</div>
-        <div class="prize-pct">0.25%</div>
+        <div class="prize-pct">0.03%</div>
         <div class="prize-label">each · 7 winners</div>
       </div>
     </div>
-    <p class="prize-total">Total airdrop pool: <span>6.25%</span> of supply · One wallet, one entry</p>
+    <p class="prize-total">Total airdrop pool: <span>1% of supply</span> · One wallet, one entry</p>
   </div>
 </div>
  
@@ -336,8 +341,8 @@ footer a:hover{color:var(--g)}
 // ═══════════════════════════════════════════════
 const SPRINT = 30 * 60 * 1000;
  
-const PRIZES = ['2%','1.5%','1%','0.25%','0.25%','0.25%','0.25%','0.25%','0.25%','0.25%'];
-const PRIZE_LABELS = ['🥇 2% supply','🥈 1.5% supply','🥉 1% supply','0.25% supply','0.25% supply','0.25% supply','0.25% supply','0.25% supply','0.25% supply','0.25% supply'];
+const PRIZES = ['0.4%','0.25%','0.15%','0.03%','0.03%','0.03%','0.03%','0.03%','0.03%','0.03%'];
+const PRIZE_LABELS = ['🥇 0.4% supply','🥈 0.25% supply','🥉 0.15% supply','0.03% supply','0.03% supply','0.03% supply','0.03% supply','0.03% supply','0.03% supply','0.03% supply'];
  
 // LAUNCH is set when you paste the CA. Stored in localStorage so it survives refresh.
 let LAUNCH = parseInt(localStorage.getItem('sc_launch') || '0');
@@ -374,7 +379,19 @@ function logoClick() {
   if (logoClicks >= 5) {
     logoClicks = 0;
     const p = document.getElementById('adminPanel');
-    p.style.display = p.style.display === 'none' ? 'flex' : 'none';
+    const isOpen = p.style.display !== 'none';
+    p.style.display = isOpen ? 'none' : 'flex';
+    // Show winner wallets if sprint has ended
+    if (!isOpen) {
+      const now = Date.now();
+      const wp = document.getElementById('winnerPanel');
+      if (LAUNCH > 0 && now >= LAUNCH + SPRINT) {
+        document.getElementById('winnerList').innerHTML = renderWinnerPanel();
+        wp.style.display = 'block';
+      } else {
+        wp.style.display = 'none';
+      }
+    }
   }
 }
  
@@ -730,4 +747,3 @@ window.onload=()=>{
 </script>
 </body>
 </html>
- 
